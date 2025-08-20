@@ -1,0 +1,54 @@
+Informe Final - Analisis de Evasion de Clientes (Churn) - Telecom X
+Introducción
+
+El objetivo de este análisis fue comprender los factores que influyen en la evasión de clientes (Churn) en Telecom X. La empresa enfrenta una alta tasa de cancelaciones, lo que impacta directamente en los ingresos y la planificación estratégica. Este proyecto buscó identificar patrones en los datos de clientes y servicios que permitan anticipar la cancelación y definir acciones preventivas.
+
+Limpieza y Tratamiento de Datos
+
+Extracción: Se cargaron los datos desde la API en formato JSON y se convirtieron a un DataFrame de Pandas.
+
+Comprobación de incoherencias: Se revisaron valores ausentes, duplicados e inconsistencias en las columnas tipo diccionario.
+
+Manejo de inconsistencias: Se normalizaron columnas, se corrigieron valores de Churn a no/yes y se agregaron columnas auxiliares (tipo_pago y calculo_total).
+
+Cuentas diarias: Se creó la columna Cuentas_Diarias dividiendo la facturación mensual entre 30 días.
+
+Estandarización opcional: Se convirtieron valores categóricos a binarios y se renombraron columnas para mayor claridad.
+
+Analisis Exploratorio de Datos (EDA)
+
+Resumen estadístico: Se calcularon media, desviación estándar, percentiles y distribución de variables numéricas.
+
+Distribución de Churn: La proporción de clientes que cancelaron frente a los que permanecieron se visualizó con gráficos de barras y torta.
+
+Variables categóricas: Se analizó la evasión según género, contrato, método de pago y servicios contratados, revelando patrones en clientes más propensos a cancelar.
+
+Variables numéricas: Se evaluó la relación entre tiempo de contrato, gasto mensual y total con la evasión, utilizando boxplots para identificar rangos asociados a Churn.
+
+Principales Visualizaciones
+
+Proporcion de Churn (barras y pie chart).
+
+Conteo de Churn por variables categóricas (contrato, género, tipo de pago, servicios).
+
+Boxplots de variables numericas frente a Churn (Meses_Cliente, Cobro_Mensual, Cobro_Total, Cuentas_Diarias).
+
+Conclusiones e Insights
+
+Los clientes con contratos mes a mes tienen mayor tendencia a cancelar que los de contratos a largo plazo.
+
+Algunos servicios opcionales, como soporte técnico o seguridad en línea, están asociados a menor Churn.
+
+Clientes con menor antigüedad o gastos muy bajos/muy altos presentan mayor riesgo de evasión.
+
+La mayoría de los clientes que cancelaron tenían facturación mensual estándar y no pagos únicos, lo que sugiere que la regularidad del servicio es un factor clave.
+
+Recomendaciones
+
+Ofrecer incentivos o beneficios a clientes de contratos mes a mes para reducir la probabilidad de cancelación.
+
+Promocionar servicios adicionales que aumenten la fidelidad, como seguridad online y soporte técnico.
+
+Monitorear clientes nuevos o con altos gastos totales para detectar señales tempranas de evasión.
+
+Considerar segmentaciones de clientes según edad, antigüedad y tipo de servicio para estrategias personalizadas.
